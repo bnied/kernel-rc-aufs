@@ -1,7 +1,8 @@
 %global __spec_install_pre %{___build_pre}
 
 # Define the version of the Linux Kernel Archive tarball.
-%define LKAver 4.13-rc3
+%define LKAver 4.13
+%define LKRCver rc3
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
@@ -77,13 +78,8 @@
 %define vdso_arches i686 x86_64
 %endif
 
-# Determine the sublevel number and set pkg_version.
-%define sublevel %(echo %{LKAver} | %{__awk} -F\. '{ print $3 }')
-%if "%{sublevel}" == ""
-%define pkg_version %{LKAver}.0
-%else
-%define pkg_version %{LKAver}
-%endif
+# Set pkg_version
+%define pkg_version %{LKAver}.%{LKRCver}
 
 # Set pkg_release.
 %define pkg_release 1%{?buildid}%{?dist}
@@ -170,11 +166,11 @@ BuildRequires: python
 
 BuildConflicts: rhbuildsys(DiskFree) < 7Gb
 
-# Sources.
-Source0: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-%{LKAver}.tar.xz
-Source1: config-%{version}-i686
-Source2: config-%{version}-i686-NONPAE
-Source3: config-%{version}-x86_64
+# Sources
+Source0: https://git.kernel.org/torvalds/t/linux-%{LKAver}-%{LKRCver}.tar.gz
+Source1: config-%{LKAver}.%{LKRCver}-i686
+Source2: config-%{LKAver}.%{LKRCver}-i686-NONPAE
+Source3: config-%{LKAver}.%{LKRCver}-x86_64
 Source4: %{AUFSver}.tar
 
 %description
@@ -309,7 +305,7 @@ This package provides the perf tool and the supporting documentation.
 
 %prep
 %setup -q -n %{name}-%{version} -c
-%{__mv} linux-%{LKAver} linux-%{version}-%{release}.%{_target_cpu}
+%{__mv} linux-%{LKAver}-%{LKRCver} linux-%{version}-%{release}.%{_target_cpu}
 mkdir %{AUFSver}
 tar xf %{SOURCE4} -C %{AUFSver}
 pushd linux-%{version}-%{release}.%{_target_cpu} > /dev/null

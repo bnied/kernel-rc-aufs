@@ -65,13 +65,16 @@ if [ ! -f ../specs-el$EL_VERSION/kernel-rc-aufs-$VERSION.spec ]; then
 fi
 
 # Get minor config version from spec file
-FULL_VERSION=`cat ../specs-el$EL_VERSION/kernel-rc-aufs-$VERSION.spec | grep "%define LKAver" | awk '{print $3}'`
+BASE_VERSION=`cat ../specs-el$EL_VERSION/kernel-rc-aufs-$VERSION.spec | grep "%define LKAver" | awk '{print $3}'`
+RC_VERSION=`cat ../specs-el$EL_VERSION/kernel-rc-aufs-$VERSION.spec | grep "%define LKRCver" | awk '{print $3}'`
+
+FULL_VERSION=$BASE_VERSION.$RC_VERSION
 
 # If we only have two parts to our version number, append ".0" to the end
-VERSION_ARRAY=(`echo $FULL_VERSION | tr "." "\n"`)
-if [ ${#VERSION_ARRAY[@]} -le 2 ]; then
-  FULL_VERSION="$FULL_VERSION.0"
-fi
+#VERSION_ARRAY=(`echo $FULL_VERSION | tr "." "\n"`)
+#if [ ${#VERSION_ARRAY[@]} -le 2 ]; then
+#  FULL_VERSION="$FULL_VERSION.0"
+#fi
 
 # If our kernel config is missing, exit
 if [ ! -f ../configs-el$EL_VERSION/config-$FULL_VERSION-$ARCH ]; then

@@ -1,7 +1,8 @@
 %global __spec_install_pre %{___build_pre}
 
 # Define the version of the Linux Kernel Archive tarball.
-%define LKAver 4.13-rc3
+%define LKAver 4.13
+%define LKRCver rc3
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
@@ -54,13 +55,8 @@
 %define with_doc 0
 %endif
 
-# Determine the sublevel number and set pkg_version.
-%define sublevel %(echo %{LKAver} | %{__awk} -F\. '{ print $3 }')
-%if "%{sublevel}" == ""
-%define pkg_version %{LKAver}.0
-%else
-%define pkg_version %{LKAver}
-%endif
+# Set pkg_version
+%define pkg_version %{LKAver}.%{LKRCver}
 
 # Set pkg_release.
 %define pkg_release 1%{?buildid}%{?dist}
@@ -146,12 +142,8 @@ BuildRequires: gettext, ncurses-devel, pciutils, pciutils-devel, zlib-devel
 %endif
 
 # Sources.
-Source0: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-%{LKAver}.tar.xz
-#######################################
-#Source1: config-%{version}-i686
-#Source2: config-%{version}-i686-NONPAE
-#######################################
-Source3: config-%{version}-x86_64
+Source0: https://git.kernel.org/torvalds/t/linux-%{LKAver}-%{LKRCver}.tar.gz
+Source3: config-%{LKAver}.%{LKRCver}-x86_64
 Source4: cpupower.service
 Source5: cpupower.config
 Source6: %{AUFSver}.tar
@@ -276,7 +268,7 @@ libraries, derived from the kernel source.
 
 %prep
 %setup -q -n %{name}-%{version} -c
-%{__mv} linux-%{LKAver} linux-%{version}-%{release}.%{_target_cpu}
+%{__mv} linux-%{LKAver}-%{LKRCver} linux-%{version}-%{release}.%{_target_cpu}
 mkdir %{AUFSver}
 tar xf %{SOURCE6} -C %{AUFSver}
 pushd linux-%{version}-%{release}.%{_target_cpu} > /dev/null
