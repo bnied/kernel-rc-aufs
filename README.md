@@ -1,3 +1,7 @@
+# *WARNING* THIS IS VERY MUCH A WORK IN PROGRESS! USE AT YOUR OWN RISK!
+
+---
+
 # `kernel-rc-aufs`: `kernel-rc` with AUFS Support
 
 This repository contains the specfile and config files to build RC kernels that include AUFS for use with Docker.
