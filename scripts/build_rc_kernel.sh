@@ -46,7 +46,7 @@ fi
 
 # Set the EL version tag for the RPMs
 if [ $EL_VERSION -eq 7 ]; then
-  RPM_EL_VERSION="el7.centos"
+  RPM_EL_VERSION="el7"
 else
   RPM_EL_VERSION="el6"
 fi
@@ -166,6 +166,14 @@ fi
 
 # If we built the RPMs successfully, report that
 if [ $? -eq 0 ]; then
+  # Now that we've tested the source RPM, we can submit it to copr
+  echo "Submitting build to Copr..."
+  copr-cli build kernel-rc-aufs --nowait -r epel-$EL_VERSION-$MOCK_ARCH rpms/kernel-rc-aufs-$FULL_VERSION-1.$RPM_EL_VERSION.src.rpm > logs/copr_submission.log 2>&1
+  if [ $? -eq 0 ]; then
+    echo "Submitted to Copr successfully!"
+  else
+    echo "Submitted to Copr failed! See log for details."
+  fi
   if [ ! -d ~/RPMs/rc ]; then
     echo "Creating RPM directory..."
     mkdir -p ~/RPMs/rc 2>&1
