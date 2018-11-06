@@ -328,6 +328,7 @@ popd > /dev/null
 %build
 BuildKernel() {
     Flavour=$1
+    source /opt/rh/devtoolset-3/enable
 
     %{__make} -s distclean
 
