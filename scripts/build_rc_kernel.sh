@@ -125,6 +125,7 @@ if [[ $VERSION =~ ^4 ]]; then
   fi
   # Workaround, in the event that the aufs$VERSION branch doesn't exist yet
   if [[ $? != 0 ]]; then
+    echo "aufs$VERSION branch not found; cloning AUFS 4.x-rcN..."
     git clone git://github.com/sfjro/aufs4-standalone.git -b aufs4.x-rcN aufs-standalone > logs/aufs-git.log 2>&1
   fi
 else
