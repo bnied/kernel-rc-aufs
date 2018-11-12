@@ -168,8 +168,6 @@ BuildConflicts: rhbuildsys(DiskFree) < 7Gb
 
 # Sources
 Source0: https://git.kernel.org/torvalds/t/linux-%{LKAver}-%{LKRCver}.tar.gz
-Source1: config-%{LKAver}.%{LKRCver}-i686
-Source2: config-%{LKAver}.%{LKRCver}-i686-NONPAE
 Source3: config-%{LKAver}.%{LKRCver}-x86_64
 Source4: %{AUFSver}.tar
 
@@ -316,8 +314,6 @@ cp ../%{AUFSver}/include/uapi/linux/aufs_type.h include/uapi/linux/
 patch -p 1 < ../%{AUFSver}/aufs4-kbuild.patch
 patch -p 1 < ../%{AUFSver}/aufs4-base.patch
 patch -p 1 < ../%{AUFSver}/aufs4-mmap.patch
-%{__cp} %{SOURCE1} .
-%{__cp} %{SOURCE2} .
 %{__cp} %{SOURCE3} .
 
 # Remove unnecessary files.
