@@ -155,7 +155,7 @@ AutoProv: yes
 #
 BuildRequires: asciidoc, bash >= 2.03, bc, binutils >= 2.12, bzip2, diffutils
 BuildRequires: findutils, gawk, gcc >= 3.4.2, gzip, m4, make >= 3.78
-BuildRequires: module-init-tools, net-tools, patch >= 2.5.4, patchutils, perl
+BuildRequires: module-init-tools, net-tools, openssl, openssl-devel, patch >= 2.5.4, patchutils, perl
 BuildRequires: redhat-rpm-config, rpm-build >= 4.8.0-7, sh-utils, tar, xmlto
 %if %{with_perf}
 BuildRequires: audit-libs-devel, binutils-devel, bison, elfutils-devel
