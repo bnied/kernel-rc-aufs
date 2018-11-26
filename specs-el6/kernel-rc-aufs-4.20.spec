@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define LKAver 4.20
-%define LKRCver rc3
+%define LKRCver rc4
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
@@ -30,6 +30,9 @@
 %define with_vdso_install %{?_without_vdso_install: 0} %{?!_without_vdso_install: 1}
 # use dracut instead of mkinitrd
 %define with_dracut       %{?_without_dracut:       0} %{?!_without_dracut:       1}
+
+# Ignore unpackaged files
+%define _unpackaged_files_terminate_build 0
 
 # Build only the kernel-rc-aufs-doc & kernel-rc-aufs-firmware packages.
 %ifarch noarch

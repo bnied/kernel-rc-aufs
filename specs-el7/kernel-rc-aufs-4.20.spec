@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define LKAver 4.20
-%define LKRCver rc3
+%define LKRCver rc4
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
@@ -24,6 +24,9 @@
 %define with_perf    %{?_without_perf:    0} %{?!_without_perf:    1}
 # tools
 %define with_tools   %{?_without_tools:   0} %{?!_without_tools:   1}
+
+# Ignore unpackaged files
+%define _unpackaged_files_terminate_build 0
 
 # These architectures install vdso/ directories.
 %define vdso_arches i686 x86_64
