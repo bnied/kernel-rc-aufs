@@ -1,0 +1,8 @@
+*gz
+*xz
+*zip
+*tar
+output/
+*~
+.DS_Store
+*/.DS_Store
