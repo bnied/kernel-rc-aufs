@@ -2,7 +2,7 @@
 
 # Define the version of the Linux Kernel Archive tarball.
 %define LKAver 5.0
-%define LKRCver 1
+%define LKRCver rc1
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
