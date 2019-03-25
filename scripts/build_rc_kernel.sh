@@ -119,6 +119,7 @@ if [[ $VERSION =~ ^5 ]]; then
   git clone git://github.com/sfjro/aufs5-standalone.git -b aufs$VERSION aufs-standalone > logs/aufs-git.log 2>&1
 
   # Workaround, in the event that the aufs$VERSION branch doesn't exist yet
+  echo "Normal cloning failed; cloning AUFS 5.x-rcN..."
   if [[ $? != 0 ]]; then
     git clone git://github.com/sfjro/aufs5-standalone.git -b aufs5.x-rcN aufs-standalone > logs/aufs-git.log 2>&1
   fi
