@@ -1022,7 +1022,7 @@ fi
 %files -n bpftool
 %{_sbindir}/bpftool
 %{_sysconfdir}/bash_completion.d/bpftool
-%{_mandir}/man7/bpf-helpers.7.gz
+#%{_mandir}/man7/bpf-helpers.7.gz
 %{_mandir}/man8/bpftool*
 %endif
 
