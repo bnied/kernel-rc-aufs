@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.14.0-rc5 Kernel Configuration
+# Linux/x86 5.14.0-rc6 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Alpine 9.3.0) 9.3.0"
 CONFIG_CC_IS_GCC=y
@@ -932,7 +932,6 @@ CONFIG_BLK_PM=y
 # IO Schedulers
 #
 CONFIG_MQ_IOSCHED_DEADLINE=y
-CONFIG_MQ_IOSCHED_DEADLINE_CGROUP=y
 CONFIG_MQ_IOSCHED_KYBER=y
 CONFIG_IOSCHED_BFQ=y
 CONFIG_BFQ_GROUP_IOSCHED=y
