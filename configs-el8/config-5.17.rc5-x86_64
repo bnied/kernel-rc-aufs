@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.17.0-rc4 Kernel Configuration
+# Linux/x86 5.17.0-rc5 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027"
 CONFIG_CC_IS_GCC=y
@@ -3327,7 +3327,6 @@ CONFIG_IWLWIFI_LEDS=y
 CONFIG_IWLDVM=m
 CONFIG_IWLMVM=m
 CONFIG_IWLWIFI_OPMODE_MODULAR=y
-# CONFIG_IWLWIFI_BCAST_FILTERING is not set
 
 #
 # Debugging Options
