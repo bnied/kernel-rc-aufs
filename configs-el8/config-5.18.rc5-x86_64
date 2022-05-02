@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.18.0-rc4 Kernel Configuration
+# Linux/x86 5.18.0-rc5 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Alpine 10.3.1_git20211027) 10.3.1 20211027"
 CONFIG_CC_IS_GCC=y
@@ -2262,6 +2262,7 @@ CONFIG_PNPACPI=y
 CONFIG_BLK_DEV=y
 CONFIG_BLK_DEV_NULL_BLK=m
 CONFIG_BLK_DEV_FD=m
+# CONFIG_BLK_DEV_FD_RAWCMD is not set
 CONFIG_CDROM=m
 # CONFIG_PARIDE is not set
 # CONFIG_BLK_DEV_PCIESSD_MTIP32XX is not set
