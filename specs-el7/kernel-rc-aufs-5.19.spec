@@ -55,6 +55,7 @@
 %ifarch x86_64
 # 64-bit kernel-rc-aufs, headers, perf and tools.
 %define with_doc 0
+%define with_perf 0
 %endif
 
 # Set pkg_version
