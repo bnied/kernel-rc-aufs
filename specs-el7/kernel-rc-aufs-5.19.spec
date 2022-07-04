@@ -141,7 +141,7 @@ BuildRequires: redhat-rpm-config >= 9.1.0-55, rsync, sh-utils, tar, xmlto, xz
 %if %{with_perf}
 BuildRequires: audit-libs-devel, binutils-devel, elfutils-devel, git
 BuildRequires: java-1.8.0-openjdk-devel, libcap-devel, numactl-devel
-BuildRequires: perl(ExtUtils::Embed), python-devel, python3, rh-python36
+BuildRequires: perl(ExtUtils::Embed), python-devel, python3
 BuildRequires: slang-devel, xz-devel, zlib-devel
 %endif
 %if %{with_tools}
@@ -276,7 +276,6 @@ libraries, derived from the kernel source.
 %prep
 %if %{with_gcc9}
 . /opt/rh/devtoolset-9/enable
-. /opt/rh/rh-python36/enable
 %endif
 
 %setup -q -n %{name}-%{version} -c
@@ -302,7 +301,6 @@ popd > /dev/null
 %build
 %if %{with_gcc9}
 . /opt/rh/devtoolset-9/enable
-. /opt/rh/rh-python36/enable
 %endif
 
 BuildKernel() {
