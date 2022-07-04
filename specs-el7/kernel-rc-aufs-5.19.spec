@@ -130,9 +130,9 @@ AutoProv: yes
 # List the packages used during the kernel-rc-aufs build.
 #
 %if %{with_gcc9}
-BuildRequires: devtoolset-9-gcc, devtoolset-9-binutils, devtoolset-9-runtime, scl-utils
+BuildRequires: devtoolset-9-gcc, devtoolset-9-binutils, devtoolset-9-runtime, scl-utils, libcap-devel
 %endif
-BuildRequires: devtoolset-9-gcc, devtoolset-9-binutils, devtoolset-9-runtime, scl-utils
+BuildRequires: devtoolset-9-gcc, devtoolset-9-binutils, devtoolset-9-runtime, scl-utils, libcap-devel
 BuildRequires: asciidoc, bash >= 2.03, bc, bison, binutils >= 2.12, diffutils
 BuildRequires: elfutils-libelf-devel, findutils, gawk, gcc >= 3.4.2, gzip
 BuildRequires: hostname, m4, make >= 3.78, module-init-tools, net-tools
