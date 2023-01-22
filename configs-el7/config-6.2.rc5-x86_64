@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 6.2.0-rc4 Kernel Configuration
+# Linux/x86 6.2.0-rc5 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Alpine 12.2.1_git20220924-r4) 12.2.1 20220924"
 CONFIG_CC_IS_GCC=y
@@ -165,7 +165,6 @@ CONFIG_RCU_NOCB_CPU=y
 # CONFIG_RCU_LAZY is not set
 # end of RCU Subsystem
 
-CONFIG_BUILD_BIN2C=y
 # CONFIG_IKCONFIG is not set
 # CONFIG_IKHEADERS is not set
 CONFIG_LOG_BUF_SHIFT=19
