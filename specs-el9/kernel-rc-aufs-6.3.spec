@@ -695,7 +695,7 @@ pushd tools/gpio > /dev/null
 %{__make} -s %{?_smp_mflags}
 popd > /dev/null
 
-pushd tools/vm > /dev/null
+pushd tools/mm > /dev/null
 %{__make} -s %{?_smp_mflags} slabinfo page_owner_sort
 popd > /dev/null
 %endif
@@ -1195,7 +1195,7 @@ pushd tools/kvm/kvm_stat > /dev/null
 install -m644 -D kvm_stat.service $RPM_BUILD_ROOT%{_unitdir}/kvm_stat.service
 popd > /dev/null
 
-pushd tools/vm > /dev/null
+pushd tools/mm > /dev/null
 install -m755 slabinfo $RPM_BUILD_ROOT%{_bindir}/slabinfo
 install -m755 page_owner_sort $RPM_BUILD_ROOT%{_bindir}/page_owner_sort
 popd > /dev/null
