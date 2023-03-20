@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 6.3.0-rc2 Kernel Configuration
+# Linux/x86 6.3.0-rc3 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (GCC) 9.3.1 20200408 (Red Hat 9.3.1-2)"
 CONFIG_CC_IS_GCC=y
@@ -919,7 +919,6 @@ CONFIG_EFI_PARTITION=y
 # CONFIG_CMDLINE_PARTITION is not set
 # end of Partition Types
 
-CONFIG_BLOCK_COMPAT=y
 CONFIG_BLK_MQ_PCI=y
 CONFIG_BLK_MQ_VIRTIO=y
 CONFIG_BLK_MQ_RDMA=y
@@ -3860,7 +3859,6 @@ CONFIG_SERIAL_ARC_NR_PORTS=1
 CONFIG_SERIAL_RP2=m
 CONFIG_SERIAL_RP2_NR_UARTS=32
 CONFIG_SERIAL_FSL_LPUART=m
-# CONFIG_SERIAL_FSL_LPUART_CONSOLE is not set
 # CONFIG_SERIAL_FSL_LINFLEXUART is not set
 # CONFIG_SERIAL_SPRD is not set
 # end of Serial drivers
