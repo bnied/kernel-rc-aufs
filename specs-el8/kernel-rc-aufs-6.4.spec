@@ -95,7 +95,7 @@ BuildRequires: perl(ExtUtils::Embed) xmlto xz-devel zlib-devel
 BuildRequires: asciidoc gettext libcap-devel ncurses-devel pciutils-devel
 %endif
 %if %{with_bpftool}
-BuildRequires: binutils-devel python3-docutils zlib-devel
+BuildRequires: binutils-devel libpfm-devel libtraceevent-devel python3-docutils zlib-devel
 %endif
 BuildConflicts: rhbuildsys(DiskFree) < 500Mb
 
