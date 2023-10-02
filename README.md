@@ -1,5 +1,7 @@
 # `kernel-rc-aufs`: `kernel-rc` with AUFS Support
 
+# I will be stopping these kernel builds at the end of October. `yum.spaceduck.org` will be taken down at that time. Final builds will be made available on COPR.
+
 This repository contains the specfile and config files to build release candidate (RC) kernels that include [the AUFS filesystem](http://aufs.sourceforge.net).
 
 **_WARNING:_ These kernels are not considered stable, and should not be used on production systems!**
