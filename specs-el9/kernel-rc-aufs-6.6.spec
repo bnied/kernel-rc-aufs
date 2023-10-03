@@ -24,8 +24,8 @@
 %global _binary_payload w3T.xzdio
 
 # Define the version of the Linux Kernel Archive tarball.
-%define LKAver 6.4
-%define LKRCver rc7
+%define LKAver 6.6
+%define LKRCver rc4
 
 # Define the version of the aufs-standalone tarball
 %define AUFSver aufs-standalone
