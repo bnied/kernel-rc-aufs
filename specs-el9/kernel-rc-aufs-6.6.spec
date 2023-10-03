@@ -1403,7 +1403,7 @@ fi
 %{_bindir}/slabinfo
 
 %files -n %{name}-tools-libs
-%{_libdir}/libcpupower.so.0
+%{_libdir}/libcpupower.so.1
 %{_libdir}/libcpupower.so.0.0.1
 
 %files -n %{name}-tools-libs-devel
