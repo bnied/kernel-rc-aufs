@@ -37,7 +37,7 @@
 %define pkg_version %{LKAver}.%{LKRCver}
 
 # Set pkg_release.
-%define pkg_release %{lua:print(os.getenv("RELEASE_VERSION"))}%{?dist}%{?buildid}
+%define pkg_release 1%{?dist}%{?buildid}
 
 # Architectures upon which we can sign the kernel
 # for secure boot authentication.
